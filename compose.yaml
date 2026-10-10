@@ -1,0 +1,10 @@
+services:
+  telegram-copy-bot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - copybot-data:/app/data
+
+volumes:
+  copybot-data:
